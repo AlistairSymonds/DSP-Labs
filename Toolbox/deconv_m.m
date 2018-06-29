@@ -12,10 +12,5 @@ function [p,np,r,nr] = deconv_m(b,nb,a,na)
 % na = [na1, na2]
 %
 [p,r] = deconv(b,a);
-np1 = nb(1) - na(1); 
-np2 = np1 + length(p)-1;
-np = [np1:np2];
-
-nr1 = nb(1); 
-nr2 = nr1 + length(r)-1;
-nr = [nr1:nr2];
+np1 = nb(1) - na(1); np2 = np1 + length(p)-1; np = [np1:np2];
+nr1 = nb(1); nr2 = nr1 + length(r)-1; nr = [nr1:nr2];

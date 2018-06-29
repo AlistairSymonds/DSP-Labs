@@ -172,7 +172,7 @@ def rtsonar( f0, f1, fs, Npulse, Nseg, Nrep, Nplot, maxdist, temperature, functi
     
     pulse_a = genChirpPulse(Npulse, f0,f1,fs)
     hanWin = np.hanning(Npulse)
-    hanWin = np.reshape(hanWin, (Npulse,1) )
+    #hanWin = np.reshape(hanWin, (Npulse,1) )
     pulse_a = np.multiply(pulse_a,hanWin)
     pulse = np.real(pulse_a)
     ptrain = genPulseTrain(pulse, Nrep, Nseg)
